@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //callback hell problem - solution -- async-await/promises
+        //if we have any problem in some function and it will waited at that position due to
+        //Synchronization (slow down the program) we used async-await or promises
+        //nested function
+        const add=async()=>{
+            await minus()
+        }
+        const minus=()=>{
+            division()
+        }
+        const division=()=>{
+            multi()
+        }
+        const multi=()=>{
+            console.log("Multi Called....")
+        }
+        add()
+
+    </script>
+</body>
+</html>

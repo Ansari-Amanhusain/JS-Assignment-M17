@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //promises
+        //pending
+        //fulfilled or resolved
+        //rejected or cancelled
+        let age=25
+        const pr=new Promise((rs,rj)=>{
+            if(age >=18){
+                rs("Eligible for vote")
+            }else{
+                rj("Not Eligible for vote")
+            }
+        }).then((msg)=>console.log(msg))
+            .catch((msg)=>console.log("Error is : "+msg))
+    </script>
+</body>
+</html>

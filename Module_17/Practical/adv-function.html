@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //filter func always return array
+        //find func always return single value
+        //includes func return boolean - true or false
+        //map func can't change original array but copy of array
+        let arr=[10,20,20,30,40,50]
+        let res=arr.map((i,index)=>{
+            return i*2
+        })
+        document.write('<br>'+arr)
+        document.write('<br>'+res)
+
+        let ans=arr.filter((i,j)=>{
+            return i==20
+        })
+        console.log(ans)
+
+        res=arr.find((i,j)=>{
+            return i==20
+        })
+        console.log(res)
+
+        //reduce- reduceRight function
+        //[10,20,30,40,50,20] - i prev value. j-next value
+
+        let total=arr.reduce((i,j)=>{
+            return i+j//10+20=30 , i=30 j=30, 30+30=60
+        })
+        document.write('<br>Total is '+total)
+
+        let arr2=[2,13,12,43,65,5,61]
+        let max=arr2.reduce((i,j)=>{
+            if(i<j){
+                i=j
+            }
+            return i
+        })
+        document.write('<br>Maximum is : '+max)
+        let arr3=[2,3,43,12,32,45,65]
+        let min=arr3.reduce((i,j)=>{
+            if(i>j){
+                i=j
+            }
+            return i
+        })
+        document.write('<br>Minimum is : '+min)
+        
+        let arr4=["abc","xyz","abc","try","abc","xyz"]
+        let count=arr4.reduce((i,j)=>{
+            if(!i[j]){
+                i[j]=1
+            }else{
+                i[j]++
+            }
+            return i
+        },{})
+        console.log(count)
+    </script>
+</body>
+</html>

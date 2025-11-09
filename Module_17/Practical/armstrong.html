@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let no=1634;
+        let f=no;
+        let sum=0;
+        let len=no.toString().length
+        while(no > 0){
+            let r=no%10;
+            sum=sum + (Math.pow(r,len));
+            no=Math.floor(no/10);
+        }
+        document.write("<br>Sum of Cube :"+sum)
+        if(f == sum){
+        document.write("<br>This is Armstrong")
+        }else{
+        document.write("<br>This is not Armstrong")
+        }
+    </script>
+</body>
+</html>

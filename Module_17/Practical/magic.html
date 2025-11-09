@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //no 1729
+        //sum 1+7+2+9 = 19
+        //reverse 91
+        // multiply 19*91 = 1729
+
+        let no=1729;
+        let f=no;
+        let add=0, multi=1, reverse=0;
+
+        while(no>0){
+            let r=no%10;
+            add +=r;
+            no=Math.floor(no/10);
+        }
+        let sum=add;
+        while(add>0){
+            let r=add%10;
+            reverse = (reverse*10)+r;
+            add=Math.floor(add/10)
+        }
+
+        document.write("<br>Original Number is : "+f)
+        document.write("<br>Sum of Number : "+sum)
+        document.write("<br>Reverse of Number : "+reverse)
+
+        multi = sum * reverse;
+        document.write("<br>Multiply of Number : "+multi)
+        
+        if(f == multi){
+            document.write("<br>This is Magic Number")
+        }else{
+            document.write("<br>This is not Magic Number")
+
+        }
+    </script>
+</body>
+</html>

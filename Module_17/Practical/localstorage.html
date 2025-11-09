@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- LocalStorage is Temporary Storage we can say this Browser based -->
+    <h3>LocalStorage</h3>
+    <div id="demo">
+        <button onclick="setData()">Set Data</button>
+        <button onclick="display()">Display Data</button>
+        <button onclick="deleteAge()">Delete Age</button>
+        <button onclick="deleteAll()">Delete All</button>
+    </div>
+    <script>
+        const setData=()=>{
+            localStorage.setItem("Name","Aman")
+            localStorage.setItem("Age",22)
+            localStorage.setItem("Salary",32000)
+            localStorage.setItem("LastName","Ansari")
+        }
+        const display=()=>{
+            let a= localStorage.getItem("Name")
+            let b=localStorage.getItem("Age")
+            let c=localStorage.getItem("Salary")
+            let d=localStorage.getItem("LastName")
+            document.getElementById("demo").innerHTML="Name is "+a
+            document.getElementById("demo").innerHTML +="<br>Age is "+b
+            document.getElementById("demo").innerHTML +="<br>Salary is "+c
+            document.getElementById("demo").innerHTML +="<br>LastName is "+d
+        }
+        const deleteAge=()=>{
+            localStorage.removeItem("Age")
+        }
+        const deleteAll=()=>{
+            localStorage.clear()
+        }
+
+    </script>
+</body>
+</html>

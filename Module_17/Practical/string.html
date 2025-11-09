@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function</title>
+</head>
+<body>
+    <script>
+        let str="   hi! how are you? hI    "
+        let rep=str.replace(/hI/i,"Test")  // g for global and it is Case Sensitive
+        document.write("<br>"+rep)
+
+        let rep1=str.replaceAll(/hI/ig,"Test") //In replaceAll it is compulsory used i and g
+        document.write("<br>"+rep1)
+
+        document.write("<br> length : "+str.length)
+        document.write("<br> Uppercase : "+str.toUpperCase())
+        document.write("<br> lowercase : "+str.toLowerCase())
+        
+        document.write("<br> length : "+str.length)
+        document.write("<br> Remove WhiteSpace  : "+str.trim().length)
+        document.write("<br> Remove WhiteSpace  from start : "+str.trimStart().length)
+        document.write("<br> Remove WhiteSpace from end : "+str.trimEnd().length)
+
+        let str1="363"
+        let r=str1.padEnd(6,"RS")
+        document.write("<br>"+r)
+
+        //Slice print from 3 position to 8 and substr print from 3 to 8 character.
+        let res=str.substr(3,8)  //slice(3,8)
+        document.write("<br>"+res)
+
+
+    </script>
+</body>
+</html>

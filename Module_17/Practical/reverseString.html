@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse string</title>
+</head>
+<body>
+    <form onsubmit="getReverse(event)">
+        <label for="name">Name :</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br>
+        <button type="submit">Reverse</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function reverseString(name){
+            return name.split("").reverse().join("");
+        }
+
+        function isPalindrome(str){
+            let reversed = str.split("").reverse().join("");
+            return str === reversed ;
+        }
+
+        function getReverse(event){
+            event.preventDefault();
+            let name=document.getElementById('name').value;
+            document.getElementById('result').innerText=" 1) Reverse String is "+reverseString(name)+ " 2) Is the name is palindrom? "+isPalindrome(name);
+        }
+
+    </script>
+
+</body>
+</html>

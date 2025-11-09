@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Abc{//Parents / Base / Super
+            constructor(){
+                console.log('Parents Class Constructor')
+            }
+            dispA(){
+                console.log('Parents Class Function')
+            }
+        }
+        class Xyz extends Abc{ //Child / Derived / Sub class
+            constructor(){
+                super()
+                console.log('Child Class Constructor')
+            }
+            dispB(){
+                console.log('Child Class Function')
+            }
+        }
+        let x=new Xyz()
+        x.dispA()
+        x.dispB()
+    </script>
+</body>
+</html>

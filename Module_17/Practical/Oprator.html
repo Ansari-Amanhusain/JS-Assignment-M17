@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in JavaScript</title>
+</head>
+<body>
+    <script>
+        // Assignment Operator
+        let a = 10;
+        a += 2;
+        document.write("<br><br>-----Assignment Operator----------");
+        document.write("<br>Addition is: " + a);
+        a -= 10;
+        document.write("<br>Value of A: " + a);
+
+        // Relational Operator
+        let b = 10;
+        let c = 5;
+        document.write("<br><br>-----Relational Operator----------");
+        document.write("<br>B > C ? " + (b > c));
+        document.write("<br>B < C ? " + (b < c));
+        document.write("<br>B >= C ? " + (b >= c));
+        document.write("<br>B <= C ? " + (b <= c));
+        document.write("<br>B == C ? " + (b == c));
+        document.write("<br>B === C ? " + (b === c));
+
+        // Logical Operator
+        document.write("<br><br>-----Logical Operator----------");
+        document.write("<br>A< B AND A > C ? " + (a < b && a > c));
+        document.write("<br>A < B OR A > C ? " + (a < b || a > c));
+        document.write("<br>!(B > C) ? " + (!(b > c)));
+    </script>
+</body>
+</html>
